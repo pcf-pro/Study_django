@@ -1,12 +1,35 @@
-<<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Первый сайт</title>
-  </head>
-  <body>
-    <p> А я люблю Дашику!</p>
-    <p> А я люблю Евочку!</p>
-    <p> А я люблю Федичку!</p>
-  </body>
+<html>
+    <head>
+        <title>Django</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django</a></h1>
+            {% for i in posts %}
+              <div>
+                <p>published: {{i.published_date}}</p>
+                <h1><a href="">{{i.title}}</a></h1>
+                <p>{{i.text|linebreaksbr}}</p>
+              </div>
+            {% endfor %}
+        </div>
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">My first post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            {% for i in posts %}
+              {{ i}}
+            {% endfor %}
+        </div>
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">My second post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+            {% for i in posts %}
+              {{ i}}
+            {% endfor %}
+        </div>
+    </body>
 </html>
