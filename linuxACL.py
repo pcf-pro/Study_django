@@ -17,7 +17,7 @@ def sets():
     #os.system('useradd 
     #os.system('setfacl -m u:admin:rw-,u: file.txt')
     temp = str(os.system('getfacl file.txt'))
-    print(type(temp),temp)
+    print(type(temp),temp.read())
 
 def pars():
     pass
