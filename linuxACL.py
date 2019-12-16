@@ -8,10 +8,10 @@ import argparse
 import os
 
 def greate():
-    os.system('pwd')
+    os.system('> file.txt')
 
 def sets():
-    pass
+    os.system('getfacl file.txt')
 
 def pars():
     pass
