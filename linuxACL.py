@@ -26,7 +26,7 @@ if __name__ == "__main__":
     parser.add_argument("--greate", required=False, action="store_true",
                         help='Создать файл с правами')
     parser.add_argument("--sets", required=False, action="store_true", help='установить права')
-    parser.add_argument('--pars', required=False, action='store true',
+    parser.add_argument('--pars', required=False, action='store_true',
                         help='Распарсить данные и вывести на экран')
 
     args = parser.parse_args()
