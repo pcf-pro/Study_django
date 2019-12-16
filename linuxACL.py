@@ -24,9 +24,9 @@ def sets():
         if len(i)==1:
             continue
         if ':' in i:
-            diction[i.split(':')[0]] = i.split(':')[1]
+            diction[i.split(':')[0]] = i.split(':')[1].replace(' ','')
         if '::' in i:
-            diction[i.split('::')[0]] = i.split('::')[1]
+            diction[i.split('::')[0]] = i.split('::')[1].replace(' ','')
     print(diction)       
 
 def pars():
