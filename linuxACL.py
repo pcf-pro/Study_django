@@ -12,7 +12,9 @@ def greate():
     print('File is greate!')
 
 def sets():
-    os.system('setfacl -m u:admin:rw-,u:technician:r-- file.txt')
+    os.system('useradd admin')
+    print('User admin create')
+    os.system('setfacl -m u:admin:rw- file.txt')
     os.system('getfacl file.txt')
 
 def pars():
