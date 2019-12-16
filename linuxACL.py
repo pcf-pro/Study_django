@@ -9,8 +9,10 @@ import os
 
 def greate():
     os.system('> file.txt')
+    print('File is greate!')
 
 def sets():
+    os.system('setfacl -m u:admin:rw-,u:technician:r-- file.txt')
     os.system('getfacl file.txt')
 
 def pars():
