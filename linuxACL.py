@@ -16,7 +16,7 @@ def sets():
     #print('User admin create')
     #os.system('useradd 
     #os.system('setfacl -m u:admin:rw-,u: file.txt')
-    temp = os.system('getfacl file.txt')
+    temp = [os.system('getfacl file.txt')]
     print(type(temp),temp)
 
 def pars():
