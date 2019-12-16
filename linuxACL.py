@@ -16,6 +16,7 @@ def sets():
     #print('User admin create')
     #os.system('useradd 
     #os.system('setfacl -m u:admin:rw-,u: file.txt')
+    diction = {}
     temp = os.popen('getfacl file.txt')
     for i in temp.read().split('\n'):
         if '# ' in i:
@@ -23,10 +24,10 @@ def sets():
         if len(i)==1:
             continue
         if ':' in i:
-            print( i.split(':'))
+            diction[i.split(':')[0]] = i.split(':')[1]
         if '::' in i:
-            print(i.split('::'))
-            
+            diction[i.split('::')[0]] = i.split('::')[1]
+    print(diction)       
 
 def pars():
     pass
